@@ -9,17 +9,9 @@ body{
   background: url('http://wader.github.io/slippy/resources/svg/background.svg');
   background-repeat: no-repeat;
   background-size: cover;
-  
+  color: #fff;
 }
-/* .section{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    min-height: 100vh;
-    background-size: cover;
-    background-position: center;
-    background-attachment: fixed;
-} */
+
 
 .container-1 {
   position: relative;
@@ -77,10 +69,15 @@ html {
 }
 .navbar-nav .nav-link {
   text-align: center;
+  color:rgb(236, 227, 227) !important;
 }
-
+.navbar-nav .nav-link:hover{
+  color:#fff !important;
+  font-size: 1.1em;
+  transition: 0.5;
+}
 .text-light {
-  color: #f8f9fa !important;
+  color: #fff !important;
 }
 
 .fondo-cards1 {
@@ -191,11 +188,11 @@ html {
 }
 .contenido h2 {
   font-size: 3em;
-  color: #8a2435;
+  color: #fff;
 }
-.contraer p {
+.contraer .p{
   font-size: 1.2em;
-  color: #8a2435;
+  color: #fff !important;
 }
 
 .imgBox {
@@ -220,10 +217,11 @@ html {
 /*Experiencia laboral*/
 .exp{
   
-  background: rgba(255, 255, 255, 0.5) !important;
-  filter: blur(0.5px);
+  background: rgba(255, 255, 255, 0.1);
+  filter: blur(0.1px);
   box-shadow: 0 15px 50px rgba(0, 0, 0, 1);
   overflow: hidden;
+  color: #131111;
 }
 .titulo{
   color: #fff;
@@ -282,7 +280,7 @@ article .exp .span:nth-child(3){
   height: 3px;
   background: linear-gradient(to left, transparent, #1779ff);
   animation: animate3 2s linear infinite;
-  /* animation-delay: 2s; */
+  animation-delay: 2s;
 }
 @keyframes animate3{
   0%{
@@ -296,9 +294,9 @@ article .exp .span:nth-child(4){
   position: absolute;
   top: 0;
   left: 0;
-  width: 5px;
+  width: 3px;
   height: 100%;
-  background: linear-gradient(to top, transparent, #040f20);
+  background: linear-gradient(to top, transparent, #1779ff);
   animation: animate4 2s linear infinite;
   animation-delay: 1s;
 }
@@ -310,7 +308,7 @@ article .exp .span:nth-child(4){
     transform: translateY(-100%);
   }
 }
-/*Efecto Swiper*/
+/*Efecto Swiper en Estudios*/
 
 .swiper-container {
   width: 100%;
@@ -410,6 +408,219 @@ article .exp .span:nth-child(4){
   padding-left: 60px;
 }
 
+/*Formulario*/
+.vista{
+  /* border: solid #1779ff; */
+  margin-bottom: 35px;
+}
+.box-form{
+  position: relative;
+  /* border: solid #040f20; */
+  margin: 25px;
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+.grupo-input{
+  position: relative;
+}
+
+
+.box-form .cubos{
+  position: absolute;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.4);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.2);
+  animation: animate5 5s linear infinite;
+}
+@keyframes animate5{
+  0%,100%{
+    transform: translateY(10px);
+  }
+  50%{
+    transform: translateY(-10px);
+  }
+}
+.box-form .cubos:nth-child(1){
+  top: -5px;
+  right: 2px;
+  width: 100px;
+  height: 100px;
+  border-radius: 8px;
+}
+
+.box-form .cubos:nth-child(2){
+  top: 320px;
+  left: -65px;
+  width: 120px;
+  height: 120px;
+  border-radius: 8px;
+  z-index: 1;
+}
+.box-form .cubos:nth-child(3){
+  bottom: 50px;
+  right: 150px;
+  width: 80px;
+  height: 80px;
+  border-radius: 8px;
+  z-index: 2;
+}
+.box-form .cubos:nth-child(4){
+  bottom: 5px;
+  left: 370px;
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  z-index: 0;
+}
+.box-form .cubos:nth-child(5){
+  top: -40px;
+  left: 500px;
+  width: 60px;
+  height: 60px;
+  border-radius: 8px;
+}
+.formulario{
+  /* border: solid; */
+  padding: 35px;
+}
+.contenedor-form{
+  justify-content: center;
+  position: relative;
+  margin-bottom: 50px;
+  margin: 30px;
+  padding: 30px;
+  width: 100%;
+  min-width: auto;
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  backdrop-filter: blur(5px);
+  box-shadow: 0 25px 45px rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+.formulario{
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 20px;
+  /* border: solid; */
+}
+.formulario h2{
+  position: relative;
+  color: #fff;
+  font-size: 24px;
+  font-weight: 600;
+  letter-spacing: 1px;
+  margin-bottom: 40px;
+}
+.formulario h2::before{
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -10px;
+  width: 80px;
+  height: 4px;
+  background: #fff;
+}
+.formulario__input{
+  width: 100%;
+  height: 45px;
+  border: 2px solid transparent;
+  transition: .3s ease-in-out;
+}
+.formulario__input:focus{
+  border: 2px solid #0075ff;
+  outline: none;
+}
+.formulario .inputBox{
+  width: 100%;
+  margin-top: 20px;
+}
+.formulario .inputBox input,textarea{
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  outline: none;
+  padding: 10px 20px;
+  border-radius: 25px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-right: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+  font-size: 15px;
+  letter-spacing: 1px;
+  color: #ffff;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: .3s ease-in-out;
+}
+.formulario .inputBox input:focus{
+  border: 2px solid #0075ff;
+  outline: none;
+}
+.p__error{
+  font-size: 12px;
+  margin-bottom: 0;
+  display: none;
+  padding-left: 15px;
+}
+.p__error-activo{
+  display: block;
+  
+}
+.validacion__estado-M{
+  position: absolute;
+  right: 40px;
+  bottom: 310px;
+  font-size: 22px;
+  opacity: 0; 
+}
+.validacion__estado{
+  position: absolute;
+  right: 20px;
+  bottom: 15px;
+  font-size: 18px;
+  opacity: 0;
+  z-index: 50;
+}
+.validacion__estado-activo{
+  opacity: 1;
+  color: #fff;
+}
+.validacion__estado-M-activo{
+  opacity: 1;
+}
+
+.advertencia{
+  display: none;
+}
+
+.advertencia-active{
+  display: block;
+}
+.formulario .inputBox input::placeholder{
+  color: #fff;
+}
+.formulario .inputBox textarea::placeholder{
+  color: #fff;
+}
+.formulario .inputBox input[type="submit"]{
+  background: #fff;
+  color: #666;
+  max-width: 100px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+
+
 @keyframes animate {
   0%,
   100% {
@@ -452,7 +663,7 @@ article .exp .span:nth-child(4){
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
   box-shadow: 0 5px 45px rgba(0, 0, 0, 0.1);
   backdrop-filter: blur(4px);
-  transition: 0.5s;
+  transition: 0.2s;
   overflow: hidden;
 }
 
@@ -469,7 +680,7 @@ article .exp .span:nth-child(4){
   height: 100%;
   background: rgba(255, 255, 255, 0.3);
   transform: skewX(45deg) translateX(150px);
-  transition: 0.8s;
+  transition: 0.5s;
 }
 
 .footeer li a:hover::before {
@@ -522,6 +733,9 @@ article .exp .span:nth-child(4){
     max-width: 200px;
     max-height: 250px;
   }
+  /* .box-form .cubos{
+     display: none; 
+  } */
   .footeer li a {
     font-size: 1.5em;
     width: 60px;
@@ -582,5 +796,36 @@ article .exp .span:nth-child(4){
     font-size: 1.5em;
     width: 60px;
     height: 60px;
+  }
+
+  /*Fomrulario*/
+  .vista{
+    /* border: solid #1779ff; */
+    margin-bottom: 5px;
+    display: flex;
+    justify-content: center;
+  }
+  .box-form .cubos{
+    display: none;
+  }
+  .box-form{
+    position: relative;
+    margin: 1px;
+    padding-top: 1px;
+    display: flexbox;
+    justify-content: center;
+  }
+  .box-form .contenedor-form{
+    margin-left: -10px;
+    margin-right: -10px;
+    display: flex;
+    justify-content: center;
+  }
+  .formulario{
+    position: relative;
+    width: 100%;
+    height: 90%;
+    padding-bottom: 20px;
+    padding-top: 2px;
   }
 }

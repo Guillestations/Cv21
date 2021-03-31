@@ -474,13 +474,14 @@
                 </div>
             </div>
         </article>
-        <h2 class="display-4 text-center my-4" id="contacto">Contacto</h2>
-        <article class="card border-dark my-5 shadow mb-5 bg-white rounded">
+        <h2 class="display-4 text-center my-5" id="contacto">Contacto</h2>
+        <!-- <article class="card border-dark my-5 shadow mb-5 bg-white rounded"> 
             <div class="card-header fondo-cards2 text-light">
                 <h5 class="card-title text-center">Formulario de contacto</h5>
             </div>
-            <div class="card-body formulario">
-                <!-- <form action="correo.php" method="POST" onsubmit="validarGeneral(event)" id="formConsulta">
+             <div class="card-body formulario">
+                action="https://formspree.io/f/mdoynvvk" method="POST"
+                <form  onsubmit="validarGeneral(event)" id="formConsulta">
                     <div class="form-group">
                         <label>Nombre</label>
                         <input type="text" name="nombre" class="form-control" required placeholder="Juan Perez"
@@ -502,31 +503,51 @@
                             Por favor ingrese una consulta valida (almenos 10 caracteres)
                         </div>
                     </div>
-                    <button class="btn fondo-cards2 text-light" type="submit">
+                    <button class="btn fondo-cards2 text-light" type="submit" id="enviar">
                         Enviar
                     </button>
-                </form> -->
-                
-                <form name="contact" method="POST" data-netlify="true">
-                    <p>
-                      <label>Your Name: <input type="text" name="name" /></label>   
-                    </p>
-                    <p>
-                      <label>Your Email: <input type="email" name="email" /></label>
-                    </p>
-                    <p>
-                      <label>Your Role: <select name="role[]" multiple>
-                        <option value="leader">Leader</option>
-                        <option value="follower">Follower</option>
-                      </select></label>
-                    </p>
-                    <p>
-                      <label>Message: <textarea name="message"></textarea></label>
-                    </p>
-                    <p>
-                      <button type="submit">Enviar</button>
-                    </p>
-                  </form>
+                </form>
+            </div>
+        </article>  -->
+        <article class="fomr vista container">
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="color"></div>
+            <div class="box-form">
+                <div class="cubos" style="--i:0;"></div>
+                <div class="cubos" style="--i:1;"></div>
+                <div class="cubos" style="--i:2;"></div>
+                <div class="cubos" style="--i:3;"></div>
+                <div class="cubos" style="--i:4;"></div>
+                <div class="contenedor-form formulario">
+                    <div class="formulario">
+                        <h2>Contactate conmigo</h2>
+                        <form action="https://formspree.io/f/mdoynqgw" method="POST"  id="formulario">
+                            <div class="inputBox grupo-input" id="grupo-input">
+                                <input type="text" placeholder="Ingresa tu Nombre" name="nombre"  class="formulario__input">
+                                <i class="fas fa-times-circle validacion__estado" id="iconoN"></i>
+                            </div>
+                            <p class="p__error" id="erroN">Debe ingresar un Nombre valido</p>
+                            <div class="inputBox grupo-input">
+                                <input type="email" placeholder="tucorreo@gmail.com" name="email"  class="formulario__input">
+                                <i class="fas fa-times-circle validacion__estado" id="iconoC"></i>
+                            </div>
+                            <p class="p__error" id="erroC">Debe ingresar un Email valido</p>
+                            <div class="inputBox">
+                                <textarea type="text" name="message" placeholder=" Ingresa tu consulta..." style="height: 200px;" id="mensaje"></textarea>
+                                <i class="fas fa-times-circle validacion__estado-M" id="iconoM"></i>
+                                
+                            </div>
+                            <p class="p__error" id="erroM">Debe ingresar una Consulta Valida con mas de 10 letras y menor a 250</p>
+                            <div class="inputBox" id="formulario__mensaje">
+                                <p class="advertencia" id="advertencia"><i class="fas fa-exclamation-triangle"></i> <b>Error:</b> Completa todos los campos</p>
+                            </div>
+                            <div class="inputBox">
+                                <input type="submit" value="submit" name="enviar" id="enviar">
+                            </div>
+                        </form>
+                    </div>
+                </div>
             </div>
         </article>
         <article>
